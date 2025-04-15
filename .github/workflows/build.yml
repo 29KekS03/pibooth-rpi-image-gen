@@ -21,12 +21,17 @@ jobs:
         sudo apt update
         sudo apt install -y           debootstrap dosfstools mtools qemu-user-static           binfmt-support libarchive-tools           parted python3-yaml rsync xz-utils
 
-    - name: Build image with rpi-image-gen
+    - name: Checkout rpi-image-gen
+      uses: actions/checkout@v4
+      with:
+        repository: RPi-Distro/rpi-image-gen
+        path: rpi-image-gen
+    
+    - name: Build image
       run: |
-        git clone https://github.com/RPi-Distro/rpi-image-gen.git
         cd rpi-image-gen
         sudo ./build.sh ../config/image.ini ../profile/pibooth.profile
-
+      
     - name: Upload image
       uses: actions/upload-artifact@v4
       with:
