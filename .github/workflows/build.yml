@@ -19,7 +19,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
-        sudo apt install -y           debootstrap dosfstools mtools qemu-user-static           binfmt-support libarchive-tools           parted python3-yaml rsync xz-utils
+        sudo apt install -y debootstrap dosfstools mtools qemu-user-static binfmt-support libarchive-tools parted python3-yaml rsync xz-utils ca genimage mmdebstrap bdebstrap crudini pv dctrl-tools
 
     - name: Checkout rpi-image-gen
       uses: actions/checkout@v4
