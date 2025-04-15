@@ -1,0 +1,16 @@
+packages:
+  - pibooth
+  - xinit
+  - openbox
+  - python3-pil
+  - python3-psutil
+  - python3-pygame
+  - python3-pyserial
+  - python3-rpi.gpio
+  - python3-evdev
+  - htop
+  - unzip
+  - git
+  - curl
+  - usbutils
+  - overlayroot
