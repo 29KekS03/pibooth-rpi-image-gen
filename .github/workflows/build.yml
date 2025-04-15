@@ -22,9 +22,9 @@ jobs:
         sudo apt install -y           debootstrap dosfstools mtools qemu-user-static           binfmt-support libarchive-tools           parted python3-yaml rsync xz-utils
 
     - name: Checkout rpi-image-gen
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
-        repository: RPi-Distro/rpi-image-gen
+        repository: raspberrypi/rpi-image-gen
         path: rpi-image-gen
     
     - name: Build image
