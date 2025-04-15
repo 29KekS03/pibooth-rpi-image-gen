@@ -22,11 +22,10 @@ jobs:
         sudo apt install -y           debootstrap dosfstools mtools qemu-user-static           binfmt-support libarchive-tools           parted python3-yaml rsync xz-utils
 
     - name: Checkout rpi-image-gen
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
       with:
         repository: RPi-Distro/rpi-image-gen
         path: rpi-image-gen
-        token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Build image
       run: |
