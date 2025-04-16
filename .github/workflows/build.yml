@@ -27,6 +27,9 @@ jobs:
         repository: raspberrypi/rpi-image-gen
         path: rpi-image-gen
 
+    - name: Make apt-key executable
+      run: chmod +x device/hooks/setup.d/01-apt-keys.sh
+
     - name: Build image (legacy)
       run: |
         cd rpi-image-gen
