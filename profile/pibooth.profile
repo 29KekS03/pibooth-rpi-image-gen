@@ -1,5 +1,5 @@
 meta:
 	- setup-keys
-  - pibooth
+	- pibooth
 hooks:
   customize: device/hooks/customize.d
