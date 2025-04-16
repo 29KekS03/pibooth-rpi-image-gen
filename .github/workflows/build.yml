@@ -26,12 +26,12 @@ jobs:
       with:
         repository: raspberrypi/rpi-image-gen
         path: rpi-image-gen
-    
-    - name: Build image
+
+    - name: Build image (legacy)
       run: |
         cd rpi-image-gen
-        sudo ./build.sh ../config/image.ini ../profile/pibooth.profile
-      
+        sudo IG_USE_PODMAN=0 ./build.sh ../config/image.ini ../profile/pibooth.profile
+
     - name: Upload image
       uses: actions/upload-artifact@v4
       with:
