@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      IG_USE_PODMAN: "0"
 
     steps:
     - name: Checkout repository
@@ -28,8 +30,6 @@ jobs:
         path: rpi-image-gen
 
     - name: Build image (legacy)
-      env:
-        IG_USE_PODMAN: "0"
       run: |
         cd rpi-image-gen
         sudo ./build.sh ../config/image.ini ../profile/pibooth.profile
