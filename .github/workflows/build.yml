@@ -28,6 +28,8 @@ jobs:
         path: rpi-image-gen
 
     - name: Build image (legacy)
+      env:
+        IG_USE_PODMAN: "0"
       run: |
         cd rpi-image-gen
         sudo IG_USE_PODMAN=0 ./build.sh ../config/image.ini ../profile/pibooth.profile
