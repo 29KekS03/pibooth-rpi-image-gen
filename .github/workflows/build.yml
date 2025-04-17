@@ -30,11 +30,11 @@ jobs:
     - name: Make apt-key executable
       run: chmod +x device/hooks/setup.d/01-apt-keys.sh
 
-    - name: Build image (legacy)
+    - name: Build image
       run: |
         cd rpi-image-gen
-        IG_USE_PODMAN=0 ./build.sh ../config/image.ini pibooth
-
+        sudo IG_USE_PODMAN=0 ./build.sh ../config/image.ini pibooth
+    
     - name: Upload image
       uses: actions/upload-artifact@v4
       with:

@@ -1,0 +1,25 @@
+extends:
+  - debian/bookworm/armhf/base-apt
+  - rpi/debian/bookworm/apt
+  - rpi/base/essential
+  - rpi/boot-firmware
+  - rpi/user-credentials
+  - rpi/misc-skel
+  - sys-apps/systemd-net-min
+  - sys-apps/fake-hwclock
+
+packages:
+  - pibooth
+  - xinit
+  - openbox
+  - python3-pil
+  - python3-psutil
+  - python3-pygame
+  - python3-pyserial
+  - python3-rpi.gpio
+  - python3-evdev
+  - htop
+  - unzip
+  - git
+  - curl
+  - usbutils
