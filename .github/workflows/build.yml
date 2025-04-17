@@ -33,7 +33,7 @@ jobs:
     - name: Build image
       run: |
         cd rpi-image-gen
-        sudo IG_USE_PODMAN=0 ./build.sh ../config/image.ini pibooth
+        IG_USE_PODMAN=0 ./build.sh ../config/image.ini pibooth
     
     - name: Upload image
       uses: actions/upload-artifact@v4
