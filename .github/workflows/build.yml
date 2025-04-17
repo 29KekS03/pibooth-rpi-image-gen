@@ -33,7 +33,6 @@ jobs:
     - name: Copy build definitions into rpi-image-gen
       run: |
         cp -r config profile meta device image rpi-image-gen/
-    
 
     - name: Build image
       run: |
