@@ -23,3 +23,6 @@ packages:
   - git
   - curl
   - usbutils
+
+hooks:
+  setup: device/hooks/setup.d
