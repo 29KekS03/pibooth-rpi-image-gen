@@ -32,12 +32,12 @@ jobs:
 
     - name: Copy build definitions into rpi-image-gen
       run: |
-        cp -r config profile meta device image rpi-image-gen/
+        sudo cp -r config profile meta device image rpi-image-gen/
 
     - name: Build image
       run: |
         cd rpi-image-gen
-        IG_USE_PODMAN=0 ./build.sh ../config/image.ini pibooth
+        sudo IG_USE_PODMAN=0 ./build.sh ../config/image.ini pibooth
     
     - name: Upload image
       uses: actions/upload-artifact@v4
