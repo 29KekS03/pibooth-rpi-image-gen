@@ -30,6 +30,11 @@ jobs:
     - name: Make apt-key executable
       run: chmod +x device/hooks/setup.d/01-apt-keys.sh
 
+    - name: Copy build definitions into rpi-image-gen
+      run: |
+        cp -r config profile meta device image rpi-image-gen/
+    
+
     - name: Build image
       run: |
         cd rpi-image-gen
